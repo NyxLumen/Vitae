@@ -1,0 +1,22 @@
+.appContainer {
+	display: flex;
+	min-height: 100vh;
+	font-family: "Inter", sans-serif;
+}
+
+.editorSection {
+	width: 40%;
+	padding: 2rem;
+	background-color: #f3f4f6;
+	overflow-y: auto;
+	border-right: 2px solid #e5e7eb;
+}
+
+.previewSection {
+	width: 60%;
+	padding: 2rem;
+	background-color: #52525b;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
