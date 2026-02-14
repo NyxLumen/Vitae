@@ -1,14 +1,24 @@
+/* Update this one */
 .appContainer {
 	display: flex;
+	flex-direction: column; /* Stack top to bottom */
 	min-height: 100vh;
 	font-family: "Inter", sans-serif;
 }
 
+/* Add this new wrapper */
+.splitView {
+	display: flex;
+	flex: 1; /* Takes up remaining height below header */
+	overflow: hidden; /* Prevents whole page from scrolling */
+}
+
+/* Make sure your editorSection and previewSection look like this */
 .editorSection {
 	width: 40%;
 	padding: 2rem;
 	background-color: #f3f4f6;
-	overflow-y: auto;
+	overflow-y: auto; /* Scroll only this side */
 	border-right: 2px solid #e5e7eb;
 }
 
@@ -16,6 +26,7 @@
 	width: 60%;
 	padding: 2rem;
 	background-color: #52525b;
+	overflow-y: auto; /* Scroll only this side */
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
