@@ -3,6 +3,7 @@ import styles from "./App.module.css";
 import GeneralInfo from "./components/editor/GeneralInfo";
 import Header from "./components/Header";
 import Education from "./components/editor/Education";
+import Experience from "./components/editor/Experience";
 import "./index.css";
 
 const INITIAL_DATA = {
@@ -62,6 +63,40 @@ function App() {
 		}));
 	};
 
+	const addExperience = () => {
+		setResumeData((prev) => ({
+			...prev,
+			experience: [
+				...prev.experience,
+				{
+					id: crypto.randomUUID(),
+					company: "",
+					position: "",
+					startDate: "",
+					endDate: "",
+					location: "",
+					description: "",
+				},
+			],
+		}));
+	};
+
+	const deleteExperience = (id) => {
+		setResumeData((prev) => ({
+			...prev,
+			experience: prev.experience.filter((item) => item.id !== id),
+		}));
+	};
+
+	const handleExperienceChange = (id, field, value) => {
+		setResumeData((prev) => ({
+			...prev,
+			experience: prev.experience.map((item) =>
+				item.id === id ? { ...item, [field]: value } : item,
+			),
+		}));
+	};
+
 	return (
 		<div className={styles.appContainer}>
 			<Header />
@@ -78,6 +113,12 @@ function App() {
 						onChange={handleEducationChange}
 						onAdd={addEducation}
 						onDelete={deleteEducation}
+					/>
+					<Experience
+						experience={resumeData.experience}
+						onChange={handleExperienceChange}
+						onAdd={addExperience}
+						onDelete={deleteExperience}
 					/>
 				</div>
 				{/* RIGHT SIDE (Temporary Preview) */}
@@ -137,6 +178,61 @@ function App() {
 											<span>{edu.degree}</span>
 											<span>{edu.location}</span>
 										</div>
+									</div>
+								))}
+							</div>
+						)}
+						{/* ---------------------------------- */}
+						{/* --- EXPERIENCE PREVIEW CODE --- */}
+						{resumeData.experience.length > 0 && (
+							<div style={{ marginTop: "20px" }}>
+								<h3
+									style={{
+										borderBottom: "1px solid #ccc",
+										paddingBottom: "5px",
+										textTransform: "uppercase",
+										fontSize: "1.1rem",
+									}}
+								>
+									Experience
+								</h3>
+								{resumeData.experience.map((job) => (
+									<div key={job.id} style={{ marginBottom: "15px" }}>
+										<div
+											style={{
+												display: "flex",
+												justifyContent: "space-between",
+												fontWeight: "600",
+												fontSize: "1.05rem",
+											}}
+										>
+											<span>{job.position}</span>
+											<span>
+												{job.startDate}{" "}
+												{job.startDate && job.endDate ? "—" : ""} {job.endDate}
+											</span>
+										</div>
+										<div
+											style={{
+												display: "flex",
+												justifyContent: "space-between",
+												color: "#4b5563",
+												fontStyle: "italic",
+												marginBottom: "5px",
+											}}
+										>
+											<span>{job.company}</span>
+											<span>{job.location}</span>
+										</div>
+										<p
+											style={{
+												margin: "0",
+												fontSize: "0.95rem",
+												whiteSpace: "pre-wrap",
+											}}
+										>
+											{job.description}
+										</p>
 									</div>
 								))}
 							</div>
