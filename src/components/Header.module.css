@@ -51,3 +51,9 @@
 	background-color: #27272a;
 	color: white;
 }
+
+@media print {
+	.header {
+		display: none !important;
+	}
+}

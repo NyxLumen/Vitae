@@ -7,7 +7,11 @@ function Header() {
 
 			<div className={styles.actions}>
 				<button className={styles.btnSecondary}>Template: Classic</button>
-				<button className={styles.btnPrimary}>Export PDF</button>
+
+				{/* The Native Browser Trigger */}
+				<button className={styles.btnPrimary} onClick={() => window.print()}>
+					Export PDF
+				</button>
 			</div>
 		</header>
 	);

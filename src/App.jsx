@@ -22,7 +22,6 @@ const INITIAL_DATA = {
 
 function App() {
 	const [resumeData, setResumeData] = useState(INITIAL_DATA);
-	const [template, setTemplate] = useState("harvard");
 
 	const handleGeneralChange = (field, value) => {
 		setResumeData((prev) => ({
@@ -33,6 +32,7 @@ function App() {
 			},
 		}));
 	};
+
 	const addEducation = () => {
 		setResumeData((prev) => ({
 			...prev,
@@ -135,14 +135,14 @@ function App() {
 	return (
 		<div className={styles.appContainer}>
 			<Header />
+
 			<div className={styles.splitView}>
 				<div className={styles.editorSection}>
-					<h1>Vitae Editor</h1>
+					<h1>Editor</h1>
 					<GeneralInfo
 						data={resumeData.general}
 						onChange={handleGeneralChange}
 					/>
-
 					<Education
 						education={resumeData.education}
 						onChange={handleEducationChange}
@@ -162,7 +162,6 @@ function App() {
 						onDelete={deleteProject}
 					/>
 				</div>
-				{/* RIGHT SIDE (Temporary Preview) */}
 				<div className={styles.previewSection}>
 					<ResumePreview data={resumeData} />
 				</div>
