@@ -39,3 +39,53 @@
 	border-color: #3b82f6; /* Nice blue focus */
 	box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
+
+/* Add these to the bottom of Editor.module.css */
+.itemGroup {
+	margin-bottom: 1.5rem;
+}
+
+.row {
+	display: flex;
+	gap: 1rem;
+}
+
+.row .inputGroup {
+	flex: 1; /* Makes the start/end date inputs share the row equally */
+}
+
+.addBtn {
+	width: 100%;
+	padding: 0.75rem;
+	background-color: #18181b; /* Matches your header */
+	color: white;
+	border: none;
+	border-radius: 6px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+
+.addBtn:hover {
+	background-color: #3f3f46;
+}
+
+.deleteBtn {
+	background: transparent;
+	color: #ef4444;
+	border: 1px solid #ef4444;
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 500;
+}
+
+.deleteBtn:hover {
+	background: #fef2f2;
+}
+
+.divider {
+	border: 0;
+	border-top: 1px solid #e5e7eb;
+	margin: 1.5rem 0;
+}
