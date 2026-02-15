@@ -3,6 +3,7 @@
 	flex-direction: column;
 	min-height: 100vh;
 	font-family: "Inter", sans-serif;
+	overflow-x: hidden;
 }
 
 .splitView {
@@ -35,7 +36,7 @@
 	}
 
 	.previewSection {
-		width: 100% !important; /* Expands paper to full width */
+		width: 100% !important;
 		padding: 0 !important;
 		background: white !important;
 		overflow: visible !important;
@@ -44,5 +45,31 @@
 	.splitView {
 		display: block !important;
 		overflow: visible !important;
+	}
+}
+
+@media (max-width: 1024px) {
+	.splitView {
+		flex-direction: column;
+		overflow: visible;
+	}
+
+	.editorSection {
+		width: 100%;
+		padding: 0rem;
+		border-bottom: 2px solid #e5e7eb;
+		overflow-x: hidden;
+	}
+	.editorSection h1 {
+		margin-left: 0.5rem;
+	}
+	.previewSection {
+		width: 100%;
+		padding: 0rem;
+		padding-top: 0.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow-y: auto;
 	}
 }

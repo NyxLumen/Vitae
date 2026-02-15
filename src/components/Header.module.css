@@ -37,6 +37,7 @@
 }
 
 .btnSecondary {
+	display: none;
 	background-color: transparent;
 	color: #a1a1aa;
 	border: 1px solid #3f3f46;
@@ -55,5 +56,11 @@
 @media print {
 	.header {
 		display: none !important;
+	}
+}
+
+@media (max-width: 1024px) {
+	.header {
+		padding: 1rem;
 	}
 }

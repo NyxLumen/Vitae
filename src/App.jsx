@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import styles from "./App.module.css";
 import GeneralInfo from "./components/editor/GeneralInfo";
 import Header from "./components/Header";
@@ -10,10 +10,10 @@ import "./index.css";
 
 const INITIAL_DATA = {
 	general: {
-		fullName: "John Doe",
-		email: "john@example.com",
-		phone: "+1 555-0123",
-		location: "New York, NY",
+		fullName: "Nyx Lumen",
+		email: "Lumen@example.com",
+		phone: "+917649874XXX",
+		location: "Delhi, India",
 	},
 	education: [],
 	experience: [],

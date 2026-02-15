@@ -10,14 +10,12 @@ export default function ResumePreview({ data }) {
 				boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
 			}}
 		>
-			{/* HEADER */}
 			<h1 style={{ margin: 0, fontSize: "2.5rem" }}>{data.general.fullName}</h1>
 			<p style={{ marginTop: "5px", color: "#4b5563" }}>
 				{data.general.email} | {data.general.phone} | {data.general.location}
 			</p>
 			<hr style={{ border: "1px solid #e5e7eb", margin: "1rem 0" }} />
 
-			{/* EDUCATION */}
 			{data.education.length > 0 && (
 				<div style={{ marginTop: "20px" }}>
 					<h3
@@ -61,7 +59,6 @@ export default function ResumePreview({ data }) {
 				</div>
 			)}
 
-			{/* EXPERIENCE */}
 			{data.experience.length > 0 && (
 				<div style={{ marginTop: "20px" }}>
 					<h3
@@ -116,7 +113,6 @@ export default function ResumePreview({ data }) {
 				</div>
 			)}
 
-			{/* PROJECTS (Pre-wired for Phase 2) */}
 			{data.projects && data.projects.length > 0 && (
 				<div style={{ marginTop: "20px" }}>
 					<h3

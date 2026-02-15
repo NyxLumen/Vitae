@@ -13,7 +13,7 @@ export default function Experience({ experience, onChange, onAdd, onDelete }) {
 							type="text"
 							value={job.company}
 							onChange={(e) => onChange(job.id, "company", e.target.value)}
-							placeholder="e.g. Tech Corp"
+							placeholder="e.g. Amazon"
 						/>
 					</div>
 
@@ -23,7 +23,7 @@ export default function Experience({ experience, onChange, onAdd, onDelete }) {
 							type="text"
 							value={job.position}
 							onChange={(e) => onChange(job.id, "position", e.target.value)}
-							placeholder="e.g. Software Engineer"
+							placeholder="e.g. SDE"
 						/>
 					</div>
 

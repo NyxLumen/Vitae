@@ -11,7 +11,7 @@ function GeneralInfo({ data, onChange }) {
 					type="text"
 					value={data.fullName}
 					onChange={(e) => onChange("fullName", e.target.value)}
-					placeholder="e.g. John Doe"
+					placeholder="e.g. Nyx Lumen"
 				/>
 			</div>
 
@@ -21,7 +21,7 @@ function GeneralInfo({ data, onChange }) {
 					type="email"
 					value={data.email}
 					onChange={(e) => onChange("email", e.target.value)}
-					placeholder="e.g. john@gmail.com"
+					placeholder="e.g. Lumen@gmail.com"
 				/>
 			</div>
 
@@ -31,7 +31,7 @@ function GeneralInfo({ data, onChange }) {
 					type="tel"
 					value={data.phone}
 					onChange={(e) => onChange("phone", e.target.value)}
-					placeholder="e.g. +1 555-0192"
+					placeholder="e.g. +917649874XXX"
 				/>
 			</div>
 
@@ -41,7 +41,7 @@ function GeneralInfo({ data, onChange }) {
 					type="text"
 					value={data.location}
 					onChange={(e) => onChange("location", e.target.value)}
-					placeholder="e.g. London, UK"
+					placeholder="e.g. Delhi, India"
 				/>
 			</div>
 		</div>

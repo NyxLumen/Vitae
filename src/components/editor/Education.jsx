@@ -13,7 +13,7 @@ export default function Education({ education, onChange, onAdd, onDelete }) {
 							type="text"
 							value={school.school}
 							onChange={(e) => onChange(school.id, "school", e.target.value)}
-							placeholder="e.g. SRM NCR"
+							placeholder="e.g. NIT Delhi"
 						/>
 					</div>
 
@@ -36,7 +36,7 @@ export default function Education({ education, onChange, onAdd, onDelete }) {
 								onChange={(e) =>
 									onChange(school.id, "startDate", e.target.value)
 								}
-								placeholder="e.g. Aug 2023"
+								placeholder="e.g. Aug 2024"
 							/>
 						</div>
 						<div className={styles.inputGroup}>
@@ -45,7 +45,7 @@ export default function Education({ education, onChange, onAdd, onDelete }) {
 								type="text"
 								value={school.endDate}
 								onChange={(e) => onChange(school.id, "endDate", e.target.value)}
-								placeholder="e.g. May 2027"
+								placeholder="e.g. May 2028"
 							/>
 						</div>
 					</div>

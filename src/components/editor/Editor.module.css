@@ -27,6 +27,7 @@
 }
 
 .inputGroup input {
+	flex: 1 1 0;
 	padding: 0.75rem;
 	border: 1px solid #d1d5db;
 	border-radius: 6px;
@@ -36,11 +37,10 @@
 
 .inputGroup input:focus {
 	outline: none;
-	border-color: #3b82f6; /* Nice blue focus */
+	border-color: #3b82f6;
 	box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
-/* Add these to the bottom of Editor.module.css */
 .itemGroup {
 	margin-bottom: 1.5rem;
 }
@@ -51,13 +51,13 @@
 }
 
 .row .inputGroup {
-	flex: 1; /* Makes the start/end date inputs share the row equally */
+	flex: 1;
 }
 
 .addBtn {
 	width: 100%;
 	padding: 0.75rem;
-	background-color: #18181b; /* Matches your header */
+	background-color: #18181b;
 	color: white;
 	border: none;
 	border-radius: 6px;
@@ -88,4 +88,14 @@
 	border: 0;
 	border-top: 1px solid #e5e7eb;
 	margin: 1.5rem 0;
+}
+
+@media (max-width: 1024px) {
+	.section {
+		padding: 0.5rem;
+		border-radius: 0;
+	}
+	.inputGroup input {
+		max-width: 100%;
+	}
 }
