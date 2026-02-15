@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "./App.module.css";
 import GeneralInfo from "./components/editor/GeneralInfo";
 import Header from "./components/Header";
@@ -21,7 +21,16 @@ const INITIAL_DATA = {
 };
 
 function App() {
-	const [resumeData, setResumeData] = useState(INITIAL_DATA);
+	const [resumeData, setResumeData] = useState(() => {
+		const savedData = localStorage.getItem("vitae-data");
+		if (savedData) {
+			return JSON.parse(savedData);
+		}
+		return INITIAL_DATA;
+	});
+	useEffect(() => {
+		localStorage.setItem("vitae-data", JSON.stringify(resumeData));
+	}, [resumeData]);
 
 	const handleGeneralChange = (field, value) => {
 		setResumeData((prev) => ({
