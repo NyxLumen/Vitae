@@ -2,55 +2,43 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1rem 2rem;
-	background-color: #18181b;
-	color: white;
-	border-bottom: 1px solid #27272a;
+	padding: 1.25rem 2.5rem;
+	background: #fcfafa;
+	border-bottom: 1px solid #e5e7eb;
 }
 
 .logo {
-	font-family: "Playfair Display", serif;
-	font-size: 1.8rem;
-	font-weight: 600;
-	letter-spacing: 2px;
-	font-style: normal;
+	font-family: "Inter", sans-serif;
+	font-size: 2rem;
+	font-weight: 700;
+	color: #0f172a;
+	letter-spacing: -0.02em;
 }
 
 .actions {
 	display: flex;
 	gap: 1rem;
+	align-items: center;
 }
 
 .btnPrimary {
-	background-color: #3b82f6;
-	color: white;
+	background-color: #0f172a;
+	color: #ffffff;
 	border: none;
-	padding: 0.5rem 1.2rem;
-	border-radius: 6px;
+	padding: 0.5rem 1.25rem;
+	border-radius: 8px;
+	font-family: "Inter", sans-serif;
+	font-size: 0.875rem;
 	font-weight: 600;
 	cursor: pointer;
-	transition: background-color 0.2s;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+	transition: all 0.2s ease;
 }
 
 .btnPrimary:hover {
-	background-color: #2563eb;
-}
-
-.btnSecondary {
-	display: none;
-	background-color: transparent;
-	color: #a1a1aa;
-	border: 1px solid #3f3f46;
-	padding: 0.5rem 1.2rem;
-	border-radius: 6px;
-	font-weight: 500;
-	cursor: pointer;
-	transition: all 0.2s;
-}
-
-.btnSecondary:hover {
-	background-color: #27272a;
-	color: white;
+	background-color: #334155;
+	transform: translateY(-1px);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 @media print {
@@ -61,6 +49,6 @@
 
 @media (max-width: 1024px) {
 	.header {
-		padding: 1rem;
+		padding: 1rem 1.5rem;
 	}
 }

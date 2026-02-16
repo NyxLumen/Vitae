@@ -6,8 +6,6 @@ function Header() {
 			<div className={styles.logo}>Vitae</div>
 
 			<div className={styles.actions}>
-				<button className={styles.btnSecondary}>Template: Classic</button>
-
 				<button className={styles.btnPrimary} onClick={() => window.print()}>
 					Export PDF
 				</button>

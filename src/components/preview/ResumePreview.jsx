@@ -2,6 +2,7 @@ export default function ResumePreview({ data }) {
 	return (
 		<div
 			style={{
+				borderRadius: "15px",
 				background: "white",
 				padding: "2rem",
 				width: "210mm",
