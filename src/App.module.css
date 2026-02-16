@@ -64,15 +64,19 @@
 	}
 	.editorSection {
 		width: 100%;
-		padding: 1.5rem 1rem;
+		padding: 0.5rem 0rem;
 		border-right: none;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.8);
 		overflow-y: visible;
 	}
+	.editorSection h1 {
+		margin-left: 1.2rem;
+	}
 	.previewSection {
 		width: 100%;
-		padding: 2rem 1rem;
-		justify-content: flex-start;
+		padding: 1rem 0.5rem;
+		justify-content: center;
+		margin: auto;
 		overflow-x: auto;
 		-webkit-overflow-scrolling: touch;
 	}

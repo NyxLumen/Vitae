@@ -13,7 +13,7 @@ export default function Projects({ projects, onChange, onAdd, onDelete }) {
 							type="text"
 							value={proj.title}
 							onChange={(e) => onChange(proj.id, "title", e.target.value)}
-							placeholder="e.g. Encephlo"
+							placeholder="e.g. Title"
 						/>
 					</div>
 
@@ -35,7 +35,7 @@ export default function Projects({ projects, onChange, onAdd, onDelete }) {
 							type="text"
 							value={proj.link}
 							onChange={(e) => onChange(proj.id, "link", e.target.value)}
-							placeholder="e.g. github.com/nyxlumen/encephlo"
+							placeholder="e.g. github.com/XXX"
 						/>
 					</div>
 
