@@ -1,7 +1,8 @@
 .appContainer {
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
+	height: 100vh;
+	overflow: hidden;
 	font-family:
 		"Inter",
 		-apple-system,
@@ -42,6 +43,11 @@
 }
 
 @media (max-width: 1024px) {
+	.appContainer {
+		height: auto;
+		min-height: 100vh;
+		overflow: visible;
+	}
 	.splitView {
 		flex-direction: column;
 		overflow: visible;

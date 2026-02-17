@@ -6,6 +6,7 @@ import Education from "./components/editor/Education";
 import Experience from "./components/editor/Experience";
 import Projects from "./components/editor/Projects";
 import ResumePreview from "./components/preview/ResumePreview";
+import Footer from "./components/Footer";
 import "./index.css";
 
 const INITIAL_DATA = {
@@ -175,6 +176,7 @@ function App() {
 					<ResumePreview data={resumeData} />
 				</div>
 			</div>
+			<Footer />
 		</div>
 	);
 }
